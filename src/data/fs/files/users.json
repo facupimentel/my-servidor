@@ -1,0 +1,71 @@
+[
+  {
+    "_id": "43bddbe41c199adef7c7fd31",
+    "name": "tyrone",
+    "lastName": "hansen",
+    "email": "tyrone.hansen@pimentel.com",
+    "password": "hola1234",
+    "age": 28,
+    "avatar": "https://avatars.githubusercontent.com/u/90288232",
+    "role": "user"
+  },
+  {
+    "_id": "c67b748b049cedc9343bf95b",
+    "name": "kerry",
+    "lastName": "frami",
+    "email": "kerry.frami@pimentel.com",
+    "password": "hola1234",
+    "age": 56,
+    "avatar": "https://avatars.githubusercontent.com/u/49193533",
+    "role": "premium",
+    "response": {
+      "_id": "c67b748b049cedc9343bf95b",
+      "name": "facundo",
+      "lastName": "pimentel",
+      "email": "pimentelfacundo22@gmail.com",
+      "password": "aguanteboca",
+      "age": 23,
+      "avatar": "https://avatars.githubusercontent.com/u/49193533",
+      "role": "admin"
+    }
+  },
+  {
+    "_id": "e483ecf1e6da895bfbf95cda",
+    "name": "dr.",
+    "lastName": "dwight",
+    "email": "dr..dwight.rohan.iv@pimentel.com",
+    "password": "hola1234",
+    "age": 57,
+    "avatar": "https://avatars.githubusercontent.com/u/77898871",
+    "role": "admin"
+  },
+  {
+    "_id": "df8f9a9fcabd7eceea6fcbdd",
+    "name": "raul",
+    "lastName": "bernier",
+    "email": "raul.bernier@pimentel.com",
+    "password": "hola1234",
+    "age": 73,
+    "avatar": "https://avatars.githubusercontent.com/u/97964880",
+    "role": "premium"
+  },
+  {
+    "_id": "6a8f3b8473c3d21583a3ec89",
+    "name": "eric",
+    "lastName": "bergnaum",
+    "email": "eric.bergnaum@pimentel.com",
+    "password": "hola1234",
+    "age": 79,
+    "avatar": "https://avatars.githubusercontent.com/u/74609346",
+    "role": "user"
+  },
+  {
+    "_id": "75ec9c3e4c097fcee5fe78cf",
+    "name": "facundo",
+    "lastName": "pimentel",
+    "email": "pimenetelfacundo22@gmail.com",
+    "password": "hola1234",
+    "age": 23,
+    "avatar": "https://avatars.githubusercontent.com/u/97964880"
+  }
+]
