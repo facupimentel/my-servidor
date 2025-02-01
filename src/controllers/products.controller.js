@@ -1,6 +1,7 @@
+import { ne } from "@faker-js/faker";
 import productsManager from "../data/fs/products.fs.js";
 
-const readOneProduct = async (req, res) => {
+const readOneProduct = async (req, res, next) => {
   try {
     const { pid } = req.params;
     const one = await productsManager.readOne(pid);
@@ -8,29 +9,34 @@ const readOneProduct = async (req, res) => {
       return res.status(200).json({ response: one });
     }
   } catch (error) {
-    const message = error.message || "api error";
-    const status = error.status || 500;
-    return res.status(status).json({ error: message });
+    next(error);
   }
 };
 
-const readProducts = async (req, res) => {
-  const { category } = req.query;
-  const all = await productsManager.readAll(category);
-  if (all.length > 0) {
-    return res.status(200).json({ response: all });
+const readProducts = async (req, res, next) => {
+  try {
+    const { category } = req.query;
+    const all = await productsManager.readAll(category);
+    if (all.length > 0) {
+      return res.status(200).json({ response: all });
+    }
+  } catch (error) {
+    next(error);
   }
-  return res.status(404).send("NOT FOUND POINT");
 };
 
-const createProduct = async (req, res) => {
-  console.log(req.body);
-  const data = req.body;
-  const one = await productsManager.create(data);
-  return res.status(201).json({ response: one });
+const createProduct = async (req, res, next) => {
+  try {
+    console.log(req.body);
+    const data = req.body;
+    const one = await productsManager.create(data);
+    return res.status(201).json({ response: one });
+  } catch (error) {
+    next(error);
+  }
 };
 
-const updateProducts = async (req, res) => {
+const updateProducts = async (req, res, next) => {
   try {
     // de los requerimientos necesito el id y la data a actualizar
     const { pid } = req.params;
@@ -38,21 +44,17 @@ const updateProducts = async (req, res) => {
     const one = await productsManager.updateOne(pid, data);
     return res.status(200).json({ response: one });
   } catch (error) {
-    const message = error.message || "api error";
-    const status = error.status || 500;
-    return res.status(status).json({ error: message });
+    next(error);
   }
 };
 
-const destroyProduct = async (req, res) => {
+const destroyProduct = async (req, res, next) => {
   try {
     const { pid } = req.params;
     const one = await productsManager.destroyOne(pid);
     return res.status(200).json({ response: one });
   } catch (error) {
-    const message = error.message || "api error";
-    const status = error.status || 500;
-    return res.status(status).json({ error: message });
+    next(error);
   }
 };
 
